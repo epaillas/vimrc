@@ -1,5 +1,4 @@
 syntax enable
-colorscheme elflord
 set number
 set relativenumber
 set mouse=a
@@ -17,14 +16,17 @@ call plug#begin('~/.vim/plugged;')
 
 " Themes
 Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
 
 " IDE
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
-
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
+colorscheme gruvbox 
+set bg=dark
 let NERDTreeQuitOnOpen=1
 
 let mapleader=" "
