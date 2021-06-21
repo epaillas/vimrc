@@ -23,7 +23,6 @@ Plug 'micha/vim-colors-solarized'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'codota/tabnine-vim'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-commentary'
 
@@ -33,7 +32,11 @@ colorscheme gruvbox
 set bg=dark
 let NERDTreeQuitOnOpen=1
 
+let g:syntastic_always_populate_loc_list = 1
+
 let mapleader=" "
 
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<CR>
+nmap <Leader>ln :lnext<CR>
+nmap <Leader>lp :lprev<CR>
