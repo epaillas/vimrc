@@ -33,6 +33,7 @@ set bg=dark
 let NERDTreeQuitOnOpen=1
 
 let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 
 let mapleader=" "
 
@@ -40,3 +41,4 @@ nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<CR>
 nmap <Leader>ln :lnext<CR>
 nmap <Leader>lp :lprev<CR>
+nmap <Leader>ec :SyntasticCheck<CR>
