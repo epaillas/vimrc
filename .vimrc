@@ -42,3 +42,5 @@ nmap <Leader>nt :NERDTreeFind<CR>
 nmap <Leader>ln :lnext<CR>
 nmap <Leader>lp :lprev<CR>
 nmap <Leader>ec :SyntasticCheck<CR>
+nmap <Leader>hl :wincmd J<CR>
+nmap <Leader>vl :wincmd H<CR>
