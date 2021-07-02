@@ -7,10 +7,13 @@ set numberwidth=1
 set ruler
 set encoding=utf-8
 set showmatch
-set sw=4
 set laststatus=2
-filetype on            " enables filetype detection
-filetype plugin on     " enables filetype specific plugins
+filetype on               " enables filetype detection
+filetype plugin on        " enables filetype specific plugins
+filetype plugin indent on
+set tabstop=4             " show existing tab with 4 spaces width
+set shiftwidth=4          " when indenting with '>', use 4 spaces width
+set expandtab             " On pressing tab, insert 4 spaces
 
 call plug#begin('~/.vim/plugged;')
 
