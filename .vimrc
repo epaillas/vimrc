@@ -12,8 +12,10 @@ filetype on               " enables filetype detection
 filetype plugin on        " enables filetype specific plugins
 filetype plugin indent on
 set tabstop=4             " show existing tab with 4 spaces width
+set softtabstop=4
 set shiftwidth=4          " when indenting with '>', use 4 spaces width
 set expandtab             " On pressing tab, insert 4 spaces
+set hidden                " allows to have unsaved buffers off-screen
 
 call plug#begin('~/.vim/plugged;')
 
@@ -32,7 +34,7 @@ Plug 'maralla/completor.vim'
 
 call plug#end()
 
-colorscheme gruvbox
+colorscheme onedark 
 set bg=dark
 let NERDTreeQuitOnOpen=1
 
@@ -65,8 +67,8 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Use tab to trigger auto completion.  Default suggests completions as you type.
-"let g:completor_auto_trigger = 0
-"inoremap <expr> <Tab> Tab_Or_Complete()
+let g:completor_auto_trigger = 0
+inoremap <expr> <Tab> Tab_Or_Complete()
 
 inoremap <expr> <up> pumvisible() ? '<c-y><up>' : '<up>'
 inoremap <expr> <down> pumvisible() ? '<c-y><down>' : '<down>'
@@ -80,3 +82,6 @@ nmap <Leader>lp :lprev<CR>
 nmap <Leader>ec :SyntasticCheck<CR>
 nmap <Leader>hl :wincmd J<CR>
 nmap <Leader>vl :wincmd H<CR>
+nmap <Leader>bp :bp<CR>
+nmap <Leader>bn :bn<CR>
+nmap <Leader>bd :bd<CR>
