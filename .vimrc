@@ -16,6 +16,9 @@ set softtabstop=4
 set shiftwidth=4          " when indenting with '>', use 4 spaces width
 set expandtab             " On pressing tab, insert 4 spaces
 set hidden                " allows to have unsaved buffers off-screen
+set cursorline
+set foldmethod=indent
+set foldlevelstart=99
 
 call plug#begin('~/.vim/plugged;')
 
@@ -23,6 +26,7 @@ call plug#begin('~/.vim/plugged;')
 Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 Plug 'micha/vim-colors-solarized'
+Plug 'NLKNguyen/papercolor-theme'
 
 " IDE
 Plug 'easymotion/vim-easymotion'
@@ -31,11 +35,21 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-commentary'
 Plug 'maralla/completor.vim'
+Plug 'tpope/vim-surround'
+Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'psliwka/vim-smoothie'
+" Plug 'vim-scripts/Efficient-python-folding'
+
+Plug 'JuliaEditorSupport/julia-vim'
 
 call plug#end()
 
 colorscheme onedark 
-set bg=dark
+hi Normal ctermbg=NONE
+highlight NonText ctermbg=NONE
+hi Normal guibg=NONE
+
+" set bg=dark
 let NERDTreeQuitOnOpen=1
 
 let g:syntastic_always_populate_loc_list = 1
@@ -85,3 +99,4 @@ nmap <Leader>vl :wincmd H<CR>
 nmap <Leader>bp :bp<CR>
 nmap <Leader>bn :bn<CR>
 nmap <Leader>bd :bd<CR>
+
